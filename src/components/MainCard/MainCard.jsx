@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchAdvice } from "../../../api/fetchAdvice";
+import { fetchAdvice } from "../../api/fetchAdvice";
 
 const MainCard = () => {
   const { isLoading, error, data, refetch } = useQuery({
@@ -8,12 +8,9 @@ const MainCard = () => {
     refetchOnWindowFocus: false,
   });
 
-  if (error) {
-    return <div>Error al cargar el consejo.</div>;
-  }
   return (
     <div className=" h-screen bg-dark-blue flex flex-col items-center justify-center">
-      <div className="card_container rounded-lg bg-dark-grayish-blue w-80 p-7 md:w-96 flex flex-col items-center shadow-2xl">
+      <div className="card_container rounded-lg bg-dark-grayish-blue w-11/12 p-7 max-w-sm flex flex-col items-center shadow-2xl">
         <h1 className="card_title text-neon-green text-xs ">
           {isLoading
             ? `"Loading..."`
