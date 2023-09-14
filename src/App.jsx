@@ -1,5 +1,4 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import "./App.css";
 import MainCard from "./components/MainCard/MainCard";
 
 // Create a client
